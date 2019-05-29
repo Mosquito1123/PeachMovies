@@ -10,9 +10,9 @@ class MyScene extends StatefulWidget {
   _MySceneState createState() => _MySceneState();
 }
 
-class _MySceneState extends State<MyScene> with RouteAware{
+class _MySceneState extends State<MyScene> with RouteAware {
   String avatarUrl =
-      'https://ws2.sinaimg.cn/large/006tKfTcly1g1jsilob3pj30oe0oi7vc.jpg';
+      'https://avatars1.githubusercontent.com/u/9191053?s=400&u=30609eff4012af352d1b6034a8d9a89a4ee0ae04&v=4';
 
   @override
   void deactivate() {
@@ -36,7 +36,8 @@ class _MySceneState extends State<MyScene> with RouteAware{
               _buildItem('images/icon_github.png', '项目地址', _openGithub),
               _buildItem('images/icon_qq.png', 'Flutter 技术群', _copyQQNumber),
               _buildItem('images/icon_wechat.png', '我的微信号', _copyWechatNumber),
-              _buildItem('images/icon_account.png', '我的公众号', _copyOfficialAccountNumber),
+              _buildItem('images/icon_account.png', '我的公众号',
+                  _copyOfficialAccountNumber),
               _buildItem('images/icon_API.png', 'API 文档', _openApi),
             ],
           )),
@@ -44,25 +45,35 @@ class _MySceneState extends State<MyScene> with RouteAware{
   }
 
   _openGithub() {
-    AppNavigator.push(context, WebViewScene(url: 'https://github.com/Mayandev/morec',title: 'Morec',));
+    AppNavigator.push(
+        context,
+        WebViewScene(
+          url: 'https://github.com/Mosquito1123/PeachMovies.git',
+          title: 'PeachMovies',
+        ));
   }
 
   _openApi() {
-    AppNavigator.push(context, WebViewScene(url: 'https://github.com/Mayandev/morec/blob/master/API.md',title: 'Api',));
+    AppNavigator.push(
+        context,
+        WebViewScene(
+          url: 'https://github.com/Mosquito1123/PeachMovies/blob/master/API.md',
+          title: 'Api',
+        ));
   }
 
   _copyQQNumber() {
-    Clipboard.setData(ClipboardData(text:'693338726'));
-    Toast.show('已复制 QQ 群号');
+    Clipboard.setData(ClipboardData(text: '1020222363'));
+    Toast.show('已复制 QQ 号');
   }
 
   _copyOfficialAccountNumber() {
-    Clipboard.setData(ClipboardData(text:'fever_code'));
+    Clipboard.setData(ClipboardData(text: 'fever_code'));
     Toast.show('已复制微信公众号');
   }
 
   _copyWechatNumber() {
-    Clipboard.setData(ClipboardData(text:'zmy1349571206'));
+    Clipboard.setData(ClipboardData(text: '13823501974'));
     Toast.show('已复制微信号');
   }
 
@@ -139,7 +150,7 @@ class _MySceneState extends State<MyScene> with RouteAware{
                     SizedBox(
                       height: 10,
                     ),
-                    Text('MayanDev',
+                    Text('Winston',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
